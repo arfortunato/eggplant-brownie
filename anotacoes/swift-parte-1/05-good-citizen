@@ -1,0 +1,25 @@
+
+import UIKit
+
+class Refeicao {
+    
+    //Mark - atributos
+    var nome: String
+    var felicidade: String
+    
+    //Mark - construtor - obrigado deixar explicito a tipagem
+    init(nome: String, felicidade: String) {
+        self.nome = nome
+        self.felicidade = felicidade
+    }
+
+}
+
+let refeicao2 = Refeicao(nome: "Macarrão", felicidade: "5")
+print(refeicao2.nome)
+print(refeicao2.felicidade)
+
+let refeicao3 = Refeicao(nome: "Feijão", felicidade: "4")
+print(refeicao3.nome)
+print(refeicao3.felicidade)
+

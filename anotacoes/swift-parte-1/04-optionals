@@ -1,0 +1,57 @@
+
+import UIKit
+
+//Criar primeira refeição
+var nome: String = "Macarrão"
+var felicidade: String = "5"
+
+//Criar segunda refeição
+let nome2: String = "Churros"
+let felicidade2: String = "4"
+
+
+//_______________________
+
+//Criar uma classe que agrupe essas características
+
+class Refeicao {
+    var nome: String?
+    var felicidade: String?
+}
+
+//intanciando uma class
+let refeicao = Refeicao()
+refeicao.nome = "Macarrão"
+
+//Jamais use esse caso
+if refeicao.nome != nil {
+    print(refeicao.nome!)
+}
+
+
+//Boas práticas para extrair
+
+//if let
+if let nome  = refeicao.nome {
+    print(nome)
+}
+
+//guard let
+func exibeNomeDaRefeicao() {
+    if let nome = refeicao.nome{
+        print(nome)
+    }
+    guard let nome = refeicao.nome else {
+        return
+    }
+    print(nome)
+}
+
+exibeNomeDaRefeicao()
+
+
+//Serio, jamais faca esse, colocando !
+class Refeicao3 {
+    var nome: String!
+    var felicidade: String!
+}
