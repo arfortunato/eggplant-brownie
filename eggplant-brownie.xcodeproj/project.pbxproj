@@ -14,6 +14,8 @@
 		8B4C25F1258A6A6400C21E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B4C25F0258A6A6400C21E92 /* Assets.xcassets */; };
 		8B4C25F4258A6A6400C21E92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B4C25F2258A6A6400C21E92 /* LaunchScreen.storyboard */; };
 		8B510F21258D480300EC2912 /* RefeicoesTableViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B510F20258D480300EC2912 /* RefeicoesTableViewControler.swift */; };
+		8B66618D25910545006591CD /* AdicionarItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B66618B25910545006591CD /* AdicionarItensViewController.swift */; };
+		8B66618E25910545006591CD /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B66618C25910545006591CD /* AdicionarItensViewController.xib */; };
 		8BD1FE35258D227E00CE2481 /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1FE34258D227E00CE2481 /* Refeicao.swift */; };
 		8BD1FE39258D22C700CE2481 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1FE38258D22C700CE2481 /* Item.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +31,8 @@
 		8B4C25F3258A6A6400C21E92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B4C25F5258A6A6400C21E92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B510F20258D480300EC2912 /* RefeicoesTableViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewControler.swift; sourceTree = "<group>"; };
+		8B66618B25910545006591CD /* AdicionarItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarItensViewController.swift; sourceTree = "<group>"; };
+		8B66618C25910545006591CD /* AdicionarItensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarItensViewController.xib; sourceTree = "<group>"; };
 		8BD1FE34258D227E00CE2481 /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		8BD1FE38258D22C700CE2481 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +92,7 @@
 		8BD1FE3D258D242300CE2481 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8B66618B25910545006591CD /* AdicionarItensViewController.swift */,
 				8B4C25EB258A6A6100C21E92 /* ViewController.swift */,
 				8B510F20258D480300EC2912 /* RefeicoesTableViewControler.swift */,
 			);
@@ -98,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				8B4C25ED258A6A6100C21E92 /* Main.storyboard */,
+				8B66618C25910545006591CD /* AdicionarItensViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,6 +167,7 @@
 			files = (
 				8B4C25F4258A6A6400C21E92 /* LaunchScreen.storyboard in Resources */,
 				8B4C25F1258A6A6400C21E92 /* Assets.xcassets in Resources */,
+				8B66618E25910545006591CD /* AdicionarItensViewController.xib in Resources */,
 				8B4C25EF258A6A6100C21E92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +181,7 @@
 			files = (
 				8BD1FE39258D22C700CE2481 /* Item.swift in Sources */,
 				8B4C25EC258A6A6100C21E92 /* ViewController.swift in Sources */,
+				8B66618D25910545006591CD /* AdicionarItensViewController.swift in Sources */,
 				8B4C25E8258A6A6100C21E92 /* AppDelegate.swift in Sources */,
 				8B510F21258D480300EC2912 /* RefeicoesTableViewControler.swift in Sources */,
 				8B4C25EA258A6A6100C21E92 /* SceneDelegate.swift in Sources */,
