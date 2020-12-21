@@ -1,0 +1,2 @@
+//MÉTODO USADO PARA REMOVER A TELA QUE FOI ADICIONADA
+        navigationController?.popViewController(animated: true)

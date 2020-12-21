@@ -12,14 +12,16 @@ class Refeicao: NSObject {
     //Mark - atributos
     let nome: String
     let felicidade: Int
-    let itens: Array<Item> = []
+    var itens: Array<Item> = []
     
 
     
     //Mark - construtor - obrigado deixar explicito a tipagem
-    init(nome: String, felicidade: Int) {
+    //inicializando item com valor default, evita erros, e também evita inicializar todos os itens na lista como vazio, manualmente
+    init(nome: String, felicidade: Int, itens: [Item] = []) {
         self.nome = nome
         self.felicidade = felicidade
+        self.itens = itens
     }
     
     //Mark - metodos
