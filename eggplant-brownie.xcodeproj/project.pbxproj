@@ -16,6 +16,10 @@
 		8B510F21258D480300EC2912 /* RefeicoesTableViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B510F20258D480300EC2912 /* RefeicoesTableViewControler.swift */; };
 		8B66618D25910545006591CD /* AdicionarItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B66618B25910545006591CD /* AdicionarItensViewController.swift */; };
 		8B66618E25910545006591CD /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B66618C25910545006591CD /* AdicionarItensViewController.xib */; };
+		8B99F97A25922179005AEEF5 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99F97925922179005AEEF5 /* Alerta.swift */; };
+		8B99F97D2592349A005AEEF5 /* RemoveRefeicaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99F97C2592349A005AEEF5 /* RemoveRefeicaoViewController.swift */; };
+		8B99F980259258E8005AEEF5 /* RefeicaoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99F97F259258E7005AEEF5 /* RefeicaoDao.swift */; };
+		8B99F98325925D1A005AEEF5 /* ItemDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B99F98225925D1A005AEEF5 /* ItemDao.swift */; };
 		8BD1FE35258D227E00CE2481 /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1FE34258D227E00CE2481 /* Refeicao.swift */; };
 		8BD1FE39258D22C700CE2481 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1FE38258D22C700CE2481 /* Item.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +37,10 @@
 		8B510F20258D480300EC2912 /* RefeicoesTableViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewControler.swift; sourceTree = "<group>"; };
 		8B66618B25910545006591CD /* AdicionarItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarItensViewController.swift; sourceTree = "<group>"; };
 		8B66618C25910545006591CD /* AdicionarItensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarItensViewController.xib; sourceTree = "<group>"; };
+		8B99F97925922179005AEEF5 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
+		8B99F97C2592349A005AEEF5 /* RemoveRefeicaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRefeicaoViewController.swift; sourceTree = "<group>"; };
+		8B99F97F259258E7005AEEF5 /* RefeicaoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoDao.swift; sourceTree = "<group>"; };
+		8B99F98225925D1A005AEEF5 /* ItemDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDao.swift; sourceTree = "<group>"; };
 		8BD1FE34258D227E00CE2481 /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		8BD1FE38258D22C700CE2481 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +93,9 @@
 			children = (
 				8BD1FE34258D227E00CE2481 /* Refeicao.swift */,
 				8BD1FE38258D22C700CE2481 /* Item.swift */,
+				8B99F97925922179005AEEF5 /* Alerta.swift */,
+				8B99F97F259258E7005AEEF5 /* RefeicaoDao.swift */,
+				8B99F98225925D1A005AEEF5 /* ItemDao.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,6 +106,7 @@
 				8B66618B25910545006591CD /* AdicionarItensViewController.swift */,
 				8B4C25EB258A6A6100C21E92 /* ViewController.swift */,
 				8B510F20258D480300EC2912 /* RefeicoesTableViewControler.swift */,
+				8B99F97C2592349A005AEEF5 /* RemoveRefeicaoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,8 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B99F97A25922179005AEEF5 /* Alerta.swift in Sources */,
 				8BD1FE39258D22C700CE2481 /* Item.swift in Sources */,
 				8B4C25EC258A6A6100C21E92 /* ViewController.swift in Sources */,
+				8B99F97D2592349A005AEEF5 /* RemoveRefeicaoViewController.swift in Sources */,
+				8B99F98325925D1A005AEEF5 /* ItemDao.swift in Sources */,
+				8B99F980259258E8005AEEF5 /* RefeicaoDao.swift in Sources */,
 				8B66618D25910545006591CD /* AdicionarItensViewController.swift in Sources */,
 				8B4C25E8258A6A6100C21E92 /* AppDelegate.swift in Sources */,
 				8B510F21258D480300EC2912 /* RefeicoesTableViewControler.swift in Sources */,
