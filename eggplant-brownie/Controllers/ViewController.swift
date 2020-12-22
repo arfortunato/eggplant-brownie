@@ -21,18 +21,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK: - Atributos
     
     var delegate: AdicionaRefeicaoDelegate?
-    var itens: [Item] = [Item(nome: "Molho de Tomate", calorias: 40),
-                         Item(nome: "Queijo", calorias: 40),
-                         Item(nome: "Molho Apimentado", calorias: 40),
-                         Item(nome: "Manjeiricão", calorias: 40),]
-    
+    var itens: [Item] = []
     var itensSelecionados: [Item] = []
     
     //MARK: - IBOutlets
     
     @IBOutlet var nomeTextField: UITextField?
     @IBOutlet var felicidadeTextField: UITextField?
-    @IBOutlet weak var itensTableView: UITableView!
+    @IBOutlet weak var itensTableView: UITableView?
     
     
     
@@ -41,7 +37,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad(){
         let botaoAdicionaItem = UIBarButtonItem(title: "adicionar", style: .plain, target: self, action: #selector(adicionarItens))
         navigationItem.rightBarButtonItem = botaoAdicionaItem
-        }
+        recuperaItens()
+    }
+    
+    func recuperaItens(){
+        itens = ItemDao().recupera()
+    }
+    
+ 
     
     @objc func adicionarItens(){
         let adicionarItensViewController = AdicionarItensViewController(delegate: self)
@@ -50,9 +53,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func add(_ item: Item){
         itens.append(item)
-        itensTableView.reloadData()
+        ItemDao().save(itens)
+        //itensTableView?.reloadData()
+        if let tableView = itensTableView{
+            tableView.reloadData()
+        }else {
+            Alerta(controller: self).exibe(titulo: "Desculpe", mensagem: "Não foi possível atualizar a tabela")
+        }
+        
+        
+        
     }
 
+    
     
     //MARK: - UITableViewDataSource
     
@@ -92,32 +105,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    //MARK: - IBActions
-    
-    @IBAction func adicionar(_ sender: Any) {
-        
-//        if let nomeDaRefeicao = nomeTextField?.text, let felicidadeDaRefeicao = felicidadeTextField?.text{
-//            let nome = nomeDaRefeicao
-//            if let felicidade = Int(felicidadeDaRefeicao){
-//                let refeicao = Refeicao(nome: nome, felicidade: felicidade)
-//                print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
-//            }else{
-//                print("Erro ao tentar criar a refeição")
-//            }
-//        }
-        
+    func recuperaRefeicaoDoFormulario() -> Refeicao? {
         guard let nomeDaRefeicao = nomeTextField?.text else{
-            return
+            
+            return nil
         }
         
         guard let felicidadeDaRefeicao = felicidadeTextField?.text, let felicidade = Int(felicidadeDaRefeicao) else{
-            return
+           
+            return nil
         }
         
         let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade, itens: itensSelecionados)
         refeicao.itens = itensSelecionados
         
-        print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
+        return refeicao
+        
+    }
+    
+    //MARK: - IBActions
+    
+    @IBAction func adicionar(_ sender: Any) {
+       
+        //verifica se a refeicao vem opcional ou com valor para usar no delegate
+        guard let refeicao = recuperaRefeicaoDoFormulario() else {
+            Alerta(controller: self).exibe(mensagem: "Erro ao ler dados do formulário")
+            return
+            
+        }
         
         //Método usado para adicionar itens na tabela
         delegate?.add(refeicao)

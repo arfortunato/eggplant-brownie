@@ -149,7 +149,7 @@
                     <navigationItem key="navigationItem" id="2Ug-Ae-zYh"/>
                     <connections>
                         <outlet property="felicidadeTextField" destination="mU3-ba-KUI" id="IYi-0e-trB"/>
-                        <outlet property="itensTableView" destination="xGU-cM-Z8S" id="LpF-mf-doz"/>
+                        <outlet property="itensTableView" destination="xGU-cM-Z8S" id="sHb-2S-YBq"/>
                         <outlet property="nomeTextField" destination="bqy-0W-lDI" id="oxl-sw-Q6a"/>
                     </connections>
                 </viewController>
